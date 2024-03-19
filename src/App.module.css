@@ -1,0 +1,405 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: "Kadwa", serif;
+}
+
+.show-more-less-clickable{
+  color: blue;
+}
+
+:root{
+  --bg-base: #f1f0f0;
+  --bg-secondary: rgba(0,0,0,1);
+  --color-highlight: rgba(148,217,2,1);
+  --color-light: rgba(255,255,255,1);
+  --bg-success: rgb(157,217,145);
+  --bg-delete:  #FFD6D7;
+}
+
+.container {
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+  min-height: 80px;
+  background-color: var(--bg-base);
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.app_heading{
+  width: 50%;
+  height: 100%;
+  font-size: 40px;
+  color: var(--bg-secondary);
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  align-self: center;
+
+}
+
+.highlight{
+  color:var(--color-highlight)
+}
+
+.dateNtime{
+  width: 50%;
+  height: 100%;
+  font-size: 25px;
+  color: var(--bg-secondary);
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  align-self: center;
+}
+
+.timeBox{
+  width: 30px;
+  height: 30px;
+  margin:0 5px;
+  font-size: 20px;
+  background-color: var(--bg-secondary);
+  color: var(--color-light) ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gridLayout {
+  position: relative;
+  top: 80px;
+  max-width: 100vw;
+  overflow: auto;
+  display: grid;
+  margin-top: 20px;
+  grid-template-areas:
+    'div1 div2'
+    'div3 div2';
+  justify-content: space-around;
+  padding: 0 10px;
+}
+
+.grid1{
+  grid-area: div1;
+  min-width: 35vw;
+  width: 40%;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  column-gap: 10px;
+}
+
+.completedBox{
+  width: 98%;
+  min-height: 70px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  margin: 8px 8px;
+  border: 2px solid var(--color-highlight);
+}
+
+.completeHighlight{
+  height: 10px;
+  background-color: var(--color-highlight);
+}
+
+.grid2{
+  grid-area: div2;
+  width: 60vw;
+  min-height: 150px;
+
+}
+
+.listHead{
+  display: flex;
+  min-height: 40px;
+  background-color: var(--color-light);
+  width: 98%;
+  font-size: 25px;
+  padding: 0 5px;
+  color: grey;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+
+
+.addBTN{
+  width: 120px;
+  height: 35px ;
+  align-self: center;
+  border-radius: 5px;
+  background-color: #1677FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  padding: 0 10px;
+  font-weight: 600;
+  gap: 10px;
+  color: #f1f0f0;
+  border: none;
+}
+
+.todoBox{
+  width: 19vw;
+  min-height:40px ;
+  background-color: var(--color-light);
+  margin: 0px 8px 8px 8px;
+  position: relative;
+  border-radius: 5px;
+  background-color: var(--bg-base);
+}
+
+.actionList{
+  display: flex;
+  justify-content: space-between;
+  min-height: 30px;
+}
+
+.checkbox{
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+.checkbox::after{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background-color: black;
+}
+
+.edit{
+  height: 20px;
+  color: white;
+  background-color: #1677FF;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 12px;
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+}
+
+.edit:hover{
+  text-decoration: underline;
+}
+
+.delete{
+  width: 40px;
+  height: 20px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color:red;
+  font-size: 12px;
+  margin-left: 5px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all ease 1s;
+}
+
+.delete:hover{
+  text-decoration: underline;
+}
+
+.todoText{
+  font-size: 14px;
+  line-height: 22px;
+  padding: 0 5px;
+  white-space:pre-wrap;
+  /* color: grey; */
+}
+
+.timestamp{
+  min-height: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: grey;
+  font-size: 12px;
+  padding-right: 10px;
+}
+
+
+.grid3{
+  grid-area: div3;
+  width: 33vw;
+  min-height: 150px;
+}
+
+.deleteBox{
+  width: 100%;
+  min-height: 70px;
+  border-radius: 8px;
+  border:2px solid red;
+  margin: 8px 0;
+}
+
+.moreNless{
+  display: flex;
+  justify-content: flex-end;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.textArea{
+  width: 98%;
+  height: 150px;
+  font-size: 14px;
+  padding: 0 5px;
+  font-family: "Kadwa", serif;
+}
+
+.Nodata{
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: grey;
+}
+
+#myelement{
+  animation-name: myAnimation;
+  animation-duration: 2000ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes myAnimation{
+  0%{
+    opacity: 1;
+    transform: rotateX(90deg);
+  }
+  50%{
+    opacity: 0.5;
+    transform: rotateX(0deg);
+  }
+  100%{
+    display: none;
+    opacity: 0;
+    transform: rotateX(90deg);
+  }
+}
+
+@media screen and (max-width: 1000px ){
+  .app_heading{
+    font-size: 25px;
+  }
+
+  .dateNtime{
+    font-size: 20px;
+  }
+
+  .timeBox{
+    width: 27px;
+    height: 22px;
+    font-size: 18px;
+  }
+
+  .addBTN{
+    width: 100px;
+  }
+
+  .todoBox{
+    width: 28vw
+  }
+}
+
+@media screen and (max-width: 600px){
+  .todoBox{
+    width: 94vw;
+  }
+
+  .header{
+    width: 100vw;
+    flex-direction: column-reverse;
+  }
+
+  .dateNtime{
+    font-size: 16px;
+    width: 100%;
+    justify-content: center;
+    color: var(--color-light);
+    background-color: var(--bg-secondary);
+    padding-right: 0;
+    padding-top: 4px;
+  }
+
+  .timeBox{
+    height: 22px;
+    background-color: var(--color-light);
+    color: var(--bg-secondary);
+    font-size: 16px;
+  }
+
+  .listHead{
+    width: 95%;
+    padding: 0 10px;
+    font-size: 20px;
+  }
+
+  .addBTN{
+    width: 70px;
+    height: 25px;
+    font-size: 16px;
+  }
+
+  .app_heading{
+    width: 100%;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .completedBox{
+    width: 95%;
+    margin: 4px 10px;
+  }
+
+  .deleteBox{
+    width: 95%;
+    margin: 0 10px;
+  }
+
+  .Nodata{
+    font-size: 16px;
+  }
+
+  .moreNless{
+    width: 95%;
+    margin: 0 10px;
+    font-size: 14px;
+    color: blue;
+  }
+
+  .grid2{
+    width: 98vw;
+  }
+  .grid1{
+    width: 98vw;
+  }
+  .grid3{
+    width: 98vw;
+  }
+
+  .gridLayout{
+    grid-template-areas: 
+    'div2'
+    'div1'
+    'div3';
+  }
+}

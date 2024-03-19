@@ -1,0 +1,16 @@
+.show-more-less-clickable{
+    color: blue;
+  }
+
+  .ant-modal .ant-modal-close{
+    top: 20px;
+    right: 20px;
+  }
+
+  .ant-modal .ant-modal-close-x{
+    font-size: 20px;
+  }
+
+  :where(.css-dev-only-do-not-override-djtmh8).ant-popconfirm .ant-popconfirm-message >.ant-popconfirm-message-icon .anticon {
+    display: none !important;
+  }
